@@ -1,0 +1,420 @@
+* {
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+.bg-light{
+	background-color: #f4f4f6 !important;
+	padding: 10px 200px;
+}
+.navbar-light .navbar-brand{
+	font-weight: 900;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #F3A3BD;
+}
+.navbar-light .nav-link{
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+header {
+	background-color: #f4f4f6;
+	margin: 0px;
+	padding: 0px;
+}
+header img{
+	width: 100%;
+	height: 450px;
+	object-fit: contain;
+}
+
+
+.banner-title h1 {
+	margin-top: 20%;
+	color:#5a5a5a;
+	font-size: 46px;
+
+}
+
+.banner-title p{
+	margin-bottom: 25px;
+	line-height: 24px;
+	color: #777;
+}
+.banner-title a {
+	background-color: #dca079;
+	color: #FFF;
+	text-decoration: none;
+	padding: 15px 20px;
+	border-radius: 50%;
+	font-size: 18px;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	float: left;
+}
+
+.banner-title hr {
+	width: 30px;
+	height: 2px;
+	display: inline-block;
+	margin-left: 15px;
+	background-color: #F3A3BD;
+	margin-top: 30px;
+
+}
+
+
+
+button {
+	cursor: pointer;
+}
+
+#portfolio {
+	width: 100%;
+	min-height: 100vh;
+	background: white;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 2px;
+
+}
+
+.project {
+	position: relative;
+	background: #F2dad7;
+	overflow: hidden;
+}
+
+
+.project img{
+	position: absolute;
+	opacity: 0.9; 
+	max-width: 150%;
+	max-height: 200%;
+	position: center;
+}
+
+.project:hover .grid-overlay {
+	transform: translateY(0%);
+}
+
+.grid-overlay {
+	background: rgba(78,84,229,0.91);
+	height: 100%;
+	grid-column: -1;
+	grid-row: -1;
+	position: relative;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(101%);
+	transition: all 0.3s ease-in-out;
+}
+
+.grid-overlay button{
+
+	background: none;
+	outline: none;
+	font-weight: 100;
+	letter-spacing: 2px;
+	border: 1px solid white;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px;
+
+}
+
+.grid-overlay button:hover{
+	transition: all 0.3s ease-in-out;
+	background:white;
+	color: #D1a39e;
+	transform: scale(1.05);
+}
+
+.overlay{
+	position: fixed;
+	background: rgba(71,69,69, 0.7);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	z-index: 3;
+}
+.overlay.open{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-inner {
+	background: white;
+	width: 100%;
+	padding: 20px;
+	position: relative;
+	opacity: 1;
+}
+
+
+.close{
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	background: none;
+	outline: 0;
+	color: pink;
+	border: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.close:hover{
+	color: #D1a39e;
+}
+
+.project-image{
+	margin-left: -50%;
+}
+
+section p{
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 10px;
+	color: #FFC0CB;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+
+.trailer {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, rgba(33,32,38,1) 0%, rgba(98,52,5,1) 16% rgba(33,32,38,1) 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 1;
+	transition: 0.5s;
+}
+.trailer .fa-window-close {
+	color: #FFF;
+	font-size: 48px;
+	position: absolute;
+	top: 10px;
+	cursor: pointer;
+
+}
+.trailer iframe {
+	width: 70%;
+	height: 500px;
+
+}
+
+.trailer.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+@media (max-width: 992px) {
+	.bg-light {
+		padding: 10px 50px;
+
+	}
+}
+@media (max-width: 768px) {
+	header img{
+		height: 300px;
+	}
+}
+
+.banner-title h1{
+	margin-top: 10%; 
+}
+
+section .item{
+	box-shadow: 0 0 4px rgba(0,0,0,0.5);
+	margin-top: 20px;
+	margin-bottom: 0px;
+
+}
+
+
+.menu {
+	align-items: center;
+	margin: 0px;
+	padding-left: 600px;
+	background-color: #FFC0CB;
+	margin-bottom: -80px;
+	opacity: 0.7;
+	background-image: url(https://www.tasteofhome.com/wp-content/uploads/2018/10/shutterstock_779345518.jpg);
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+
+.global {
+	padding: 50px;
+	color: pink;
+	background-color: #f4f4f6;
+	margin-top: 80px;
+
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+
+.global h6 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-weight: 900;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #F3A3BD
+}
+
+.global .social {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 40px;
+	padding-bottom: 0px;
+	border-top: 1px solid #eee;
+	margin-top: 50px;
+
+
+}
+
+.global .social a{
+	font-size: 22px;
+	width: 45px;
+	height: 45px;
+	line-height: 39px;
+	display: inline-block;
+	border-radius: 50%;
+	border: 2px solid #F3A3BD;
+	box-shadow: 0px 0px 0px 1px rgba(255,192 ,203, 0.4);
+	margin: 10px;
+	color: #F3A3BD;
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+}
+
+.global .social a:hover{
+	opacity: 2;
+	box-shadow: 0px 1px 3px 2px rgba(255, 255 ,255, 0.9);
+} 
+
+.global .copyright{
+	text-align: center;
+	padding-top: 24px;
+	font-weight: 900;
+	opacity: 1.5;
+	font-size: 16px;
+	color: #F3A3BD;
+}
+
+
+.contacts-container{
+	height: 100vh;
+	width: 100%;
+	background-color: #FFC0CB;
+	box-sizing: border-box;
+	margin-bottom: -80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 20px #0000010;
+	border-radius: 8px;
+	flex-direction: column;
+
+}
+
+.form-group {
+	width: 100%
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 5px;
+	font-size: 18px;
+	border: 1px solid rgba(128,128,128,0.199);
+	margin-top: 5px;
+}
+
+button[type="submit"]{
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 20px;
+	font-size: 24px;
+	border-radius: 8px;
+	color: #FFC0CB;
+	font-weight: 700;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: .3s ease background-color;
+}
+
+button[type="submit"]:hover{
+	background-color: #0492C2;
+}
+
+#status{
+	width: 50%;
+	max-width: 350px;
+	text-align: center;
+	padding: 8px;
+	margin: 10px;
+	border-radius: 8px;
+}
+
+#status.success{
+	background-color: rgb(211,250,153);
+	animation: status 4s ease forwards;
+}
+#status.error{
+	background-color: rgb(250,192,52);
+	animation: status 4s ease forwards;
+}
+
+@keyframes status {
+	0%{
+		opacity: 1;
+		pointer-events: all;
+	}
+	90%{
+		opacity: 1;
+		pointer-events: all;
+
+	}
+	100%{
+		opacity: 0;
+		pointer-events: none;
+	}
+}
